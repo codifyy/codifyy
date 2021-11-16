@@ -1,0 +1,53 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int nr, nrcin, diff;
+
+int main(){
+
+    srand(time(0));
+    nr = (rand() % 100) + 1; //1-100
+    
+    //cout << nr << endl;
+    cout << "Foi gerado um numero entre 1 e 100 adivinha o numero: "; 
+    
+    while(nr != nrcin){
+         
+        cin >> nrcin;
+        diff = abs(nr-nrcin);
+        //cout << diff << endl;
+        
+        if(diff == 0){
+            cout << "Acertaste! O numero era: " << nr << endl;
+            
+            system("pause");
+            return 0;
+        }
+        else if (diff != 0){
+            if(diff != 0 && diff <= 5 ){
+                cout << "Esta a arder!: ";
+            }
+            else if(diff > 5 && diff <= 15){
+                cout << "Esta quente!: ";
+            }
+            else if(diff > 15 && diff <=30){
+                cout << "Esta frio!: ";
+            }
+            else if(diff > 30){
+                cout << "Esta gelado!: ";
+            }
+        //if(nr = nrcin){
+        //    
+        //}
+        //if(nr > nrcin){
+        //    cout << "Quente!: ";
+        //}
+        //else if(nr < nrcin){
+        //    cout << "Frio!: ";
+        //}
+        }
+    }
+}
